@@ -3,6 +3,9 @@
     package="plateaukao.info.retrofitsample" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-sdk android:minSdkVersion="15"
+              android:targetSdkVersion="23"
+              android:maxSdkVersion="23" />
 
     <application
         android:allowBackup="true"

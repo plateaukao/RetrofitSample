@@ -6,7 +6,6 @@
 */
 package plateaukao.info.retrofitsample.api;
 
-import plateaukao.info.retrofitsample.model.WikiModel;
 import retrofit.Callback;
 import retrofit.http.GET;
 import retrofit.http.Query;
@@ -17,4 +16,7 @@ import retrofit.http.Query;
 public interface WikiApiEndpointInterface {
 	@GET("/w/api.php?format=json&action=query&prop=revisions&rvprop=content&rvsection=0&rvparse")
 	void geAuthorContent(@Query("titles") String author ,Callback<String> cb);
+
+	@GET("/w/api.php?action=parse&format=json&prop=text")
+	void geCharContent(@Query("page") String character, Callback<String> cb);
 }
